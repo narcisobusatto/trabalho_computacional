@@ -223,15 +223,18 @@ def robust_mean_absolute_deviation(image):
     :return float: rMAD
     """
     N,M = image.shape
-    image_p900 = np.percentile(image, 90.0)        
+    image_p900 = np.percentile(image, 90.0)   
     image_p100 = np.percentile(image, 10.0)
     Np_10_90 = 0 
-    rMAD = 0       
+    rMAD = 0 
+
+    mean_10_90 = mean([i for i in image.reshape(-1) if i >= image_p100 and i <= image_p900])
+    
     for n in range(N):
         for m in range(M):
             if( (image[n,m]) >= image_p100) and (image[n,m] <= image_p900):
                 Np_10_90 += 1
-                rMAD += np.abs(image[n,m])               
+                rMAD += np.abs(image[n,m] - mean_10_90)               
     rMAD /= Np_10_90
     return np.round(rMAD, decimals=DECIMALS)
 
