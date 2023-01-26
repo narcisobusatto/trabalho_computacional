@@ -2,7 +2,16 @@
 
 Trabalho computacional de ENE 363111 Processo Estocástico - Professor Francisco Assis - UnB
 
-Primeiramente, baixe as bibliotecas (pypi)
+
+
+Primeiramente, recomenda-se verificar as bibliotecas do python necessárias
+
+```
+#Ubuntu
+sudo apt-get install python3.7|3.8|3.9-distutils
+```
+
+e as demais bibliotecas (pypi)
 ```
 python3.7|3.8|3.9 -m pip install -r requirements.txt
 ```

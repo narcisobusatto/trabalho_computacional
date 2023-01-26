@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from scipy import stats
 
 
-FILE = 'Data_Breast_Cancer_Wisconsin.csv'
+FILE = 'Data_Iris.csv'
 
 DIRECTORY = 'trabalho5_parte3'
 
@@ -60,7 +60,6 @@ def save_confidence_interval(acc_test, ci_length, classifier, confidence):
     plt.savefig(os.path.join(DIRECTORY, FOLDER_CONFIDENCE_INTERVAL, f"{classifier}_{str(confidence).replace('0.', '')}"))
     plt.close()
 
-
 def save_confusion_matrix(data, classifier):
     """
     Method to save confusion matrix to file
@@ -71,12 +70,16 @@ def save_confusion_matrix(data, classifier):
     """
 
     fig, ax = plt.subplots()
-    cm_matrix = pd.DataFrame(data=data, columns=['Actual Positive:1', 'Actual Negative:0'], 
-                                 index=['Predict Positive:1', 'Predict Negative:0'])
+    cm_matrix = pd.DataFrame(data=data, index = ['SETOSA','VERSICOLOR','VIRGINICA'], 
+                     columns = ['SETOSA','VERSICOLOR','VIRGINICA'])
 
     sns.heatmap(cm_matrix, annot=True, fmt='d', cmap='YlGnBu')
+    plt.title('Confusion Matrix')
+    plt.ylabel('Actal Values')
+    plt.xlabel('Predicted Values')
     plt.savefig(os.path.join(DIRECTORY, FOLDER_CONFUSION_MATRIX, classifier))
     plt.close()
+
 
 
 def gnb_classifier(data, test_size, column_label, print_classification_report=False, save_cm=False, save_ci=False):
@@ -243,15 +246,15 @@ def qda_classifier(data, test_size, column_label, print_classification_report=Fa
 
 
 def main():
-    data = pd.read_csv(FILE)
+    data = pd.read_csv(FILE, header=None, comment='#')
     data = data[np.isfinite(data).all(1)]
 
     # 5.5
     print("============= LDA - CLASSIFICATION REPORT =============")
-    accuracy_lda = lda_classifier(data, TEST_SIZE, 'Class', print_classification_report=True)
+    accuracy_lda = lda_classifier(data, TEST_SIZE, 4, print_classification_report=True)
     print()
     print("============= QDA - CLASSIFICATION REPORT =============")
-    accuracy_qda = qda_classifier(data, TEST_SIZE, 'Class', print_classification_report=True)
+    accuracy_qda = qda_classifier(data, TEST_SIZE, 4, print_classification_report=True)
     print()
     print("********Comparative LDA x QDA********")
     print()
@@ -269,9 +272,9 @@ def main():
     qda = []
 
     for _ in range(0, NUMBER_EXECUTIONS):
-        gnb.append(gnb_classifier(data, TEST_SIZE, 'Class', save_cm=True))
-        lda.append(lda_classifier(data, TEST_SIZE, 'Class', save_cm=True))
-        qda.append(qda_classifier(data, TEST_SIZE, 'Class', save_cm=True))
+        gnb.append(gnb_classifier(data, TEST_SIZE, 4, save_cm=True))
+        lda.append(lda_classifier(data, TEST_SIZE, 4, save_cm=True))
+        qda.append(qda_classifier(data, TEST_SIZE, 4, save_cm=True))
 
     print()
     print("Classifier\tMean\t\tVariance")
@@ -283,9 +286,9 @@ def main():
     print()
 
     # 5.8
-    gnb_interval = gnb_classifier(data, TEST_SIZE, 'Class', save_ci=True)
-    lda_interval = lda_classifier(data, TEST_SIZE, 'Class', save_ci=True)
-    qda_interval = qda_classifier(data, TEST_SIZE, 'Class', save_ci=True)
+    gnb_interval = gnb_classifier(data, TEST_SIZE, 4, save_ci=True)
+    lda_interval = lda_classifier(data, TEST_SIZE, 4, save_ci=True)
+    qda_interval = qda_classifier(data, TEST_SIZE, 4, save_ci=True)
 
     print("********Confiance Interval********")
     print()
