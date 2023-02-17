@@ -1,0 +1,95 @@
+ Datasets
+
+-  Network traffic
+https://csr.lanl.gov/data/2017.html
+https://csr.lanl.gov/data/cyber1/
+https://csr.lanl.gov/data/auth/
+https://dibbs.ai.arizona.edu/dibbs/shadowbrokers-eternalblue/ShadowbrokersEternalBlue.zip
+http://www.fukuda-lab.org/mawilab/index.html
+https://github.com/c2dc/AB-TRAP/
+https://github.com/rapid7/sonar/wiki/UDP
+https://github.com/vs-uulm/2017-SUEE-data-set
+http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
+https://www.netresec.com/index.ashx?page=PcapFiles
+https://www.pcapr.net
+https://research.aalto.fi/en/datasets/iot-devices-captures(285a9b06-de31-4d8b-88e9-5bdba46cc161).html
+https://www.stratosphereips.org/datasets-ctu13/
+https://www.unb.ca/cic/datasets/index.html
+https://zenodo.org/record/5199540
+
+-  Malware
+https://www.kaggle.com/c/malware-classification/data
+https://marcoramilli.blogspot.com/2016/12/malware-training-sets-machine-learning.html
+https://www.sec.cs.tu-bs.de/~danarp/drebin/
+https://www.stratosphereips.org/datasets-overview/
+https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/
+https://www.uvic.ca/engineering/ece/isot/datasets/botnet-ransomware/index.php
+https://zenodo.org/record/1203289#.YFhIS-axWoh
+
+-  Software
+http://www.inf.u-szeged.hu/~ferenc/papers/JSVulnerabilityDataSet/
+
+-  WebApps
+http://web.archive.org/web/20130924222653/http://iec.csic.es/dataset
+https://www.azsecure-data.org/get-data.html
+http://commoncrawl.org/the-data/get-started/
+http://data.webarchive.org.uk/opendata/ukwa.ds.1/classification/
+https://github.com/foospidy/payloads
+https://github.com/faizann24/Fwaf-Machine-Learning-driven-Web-Application-Firewall
+https://hackertarget.com/500k-http-headers/
+https://scans.io/
+http://www.secrepo.com/self.logs/
+https://www.uvic.ca/engineering/ece/isot/datasets/index.php
+https://www.westpoint.edu/crc/SitePages/DataSets.aspx
+
+-  URLs & Domain Names
+cybercrime-tracker.net/about.php
+https://feodotracker.abuse.ch/
+https://github.com/opendns/public-domain-lists
+https://majestic.com/reports/majestic-million
+http://www.malwaredomainlist.com/forums/index.php?topic=3270.0
+https://ransomwaretracker.abuse.ch/blocklist/
+http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
+https://www.stopforumspam.com/downloads
+http://www.sysnet.ucsd.edu/projects/url/#datasets
+https://urlhaus.abuse.ch/api/
+https://zeustracker.abuse.ch/
+
+-  Host
+https://csr.lanl.gov/data/2017.html
+https://github.com/jzadeh/aktaion2/tree/master/data
+http://log-sharing.dreamhosters.com/
+https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-IDS-Datasets/
+
+-  Email
+https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html
+https://techhelplist.com/spam-list
+
+-  Card Fraud
+https://www.kaggle.com/samkirkiles/credit-card-fraud/data
+
+-  Cloud Computing
+http://summitroute.com/downloads/flaws_cloudtrail_logs.tar
+https://www.uvic.ca/engineering/ece/isot/datasets/cloud-security/index.php
+
+-  Honeypots
+http://datadrivensecurity.info/blog/pages/dds-dataset-collection.html
+https://github.com/JonathanPhillips/Threat_Research
+
+-  Binaries
+https://github.com/endgameinc/ember
+
+-  Phishing
+https://archive.ics.uci.edu/ml/datasets/phishing+websites#
+
+-  Passwords
+https://figshare.com/articles/Yahoo_Password_Frequency_Corpus/2057937
+
+-  ICS 
+https://sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets
+
+-  MISC
+http://bigdata.ise.bgu.ac.il/sherlock/index.html#/download
+https://decal.github.io/werdlists
+http://www.secrepo.com/
+http://www.rrshare.org/
